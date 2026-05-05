@@ -5,7 +5,7 @@ import pygmt
 # USER SETTINGS
 # =========================
 csv_file = r"D:\Map\Sprat_gracilis_sites.csv"
-output_file = r"D:\Map\Sprat_gracilis_Philippines_Map_gradient.png"
+output_file = r"D:\Map\Sprat_gracilis_Philippines_Map_gradient_style_oleron.png"
 
 # Main map extent for whole Philippines: [west, east, south, north]
 region_main = [116, 127, 4, 21]
@@ -64,7 +64,7 @@ grid = pygmt.datasets.load_earth_relief(
 cpt_file = r"D:\Map\phil_depth_gradient.cpt"
 
 pygmt.makecpt(
-    cmap="batlowW",
+    cmap="oleron", #alternatives# try "batlowW", "deep", "oleron", "geo"
     series=[-10000, -10],
     continuous=True,
     reverse=False,
